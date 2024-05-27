@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalChessDatabaseApi", "src\PersonalChessDatabaseApi\PersonalChessDatabaseApi.csproj", "{926FA03E-00E6-4136-889B-11A010DF0E02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalChessdatabaseLibrary", "PersonalChessdatabaseLibrary\PersonalChessdatabaseLibrary.csproj", "{5351E0C7-6526-4559-8F7B-8877E6AEBEA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{926FA03E-00E6-4136-889B-11A010DF0E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{926FA03E-00E6-4136-889B-11A010DF0E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{926FA03E-00E6-4136-889B-11A010DF0E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5351E0C7-6526-4559-8F7B-8877E6AEBEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5351E0C7-6526-4559-8F7B-8877E6AEBEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5351E0C7-6526-4559-8F7B-8877E6AEBEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5351E0C7-6526-4559-8F7B-8877E6AEBEA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
