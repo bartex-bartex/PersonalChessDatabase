@@ -1,3 +1,5 @@
+using PersonalChessdatabaseLibrary;
+
 namespace PersonalChessDatabaseUI
 {
     public class Program
@@ -29,6 +31,8 @@ namespace PersonalChessDatabaseUI
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            GlobalConfig.InitializeConnections(DataSourceType.Sql);
 
             app.Run();
         }

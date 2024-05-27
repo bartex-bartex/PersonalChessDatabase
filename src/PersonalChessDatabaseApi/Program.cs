@@ -1,4 +1,6 @@
 
+using PersonalChessdatabaseLibrary;
+
 namespace PersonalChessDatabaseApi
 {
     public class Program
@@ -29,6 +31,8 @@ namespace PersonalChessDatabaseApi
 
 
             app.MapControllers();
+
+            GlobalConfig.InitializeConnections(DataSourceType.Sql);
 
             app.Run();
         }
