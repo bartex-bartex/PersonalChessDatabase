@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PersonalChessdatabaseLibrary;
-using PersonalChessdatabaseLibrary.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,39 +11,79 @@ namespace PersonalChessDatabaseApi.Controllers
     {
         // GET: api/<GameController>
         [HttpGet]
-        public List<GameModel> Get()
+        public async Task<IActionResult> GetGames(IGameData data)
         {
-            List<GameModel> games = GlobalConfig.Connection.GetGame_All();
-
-            return games;
+            try
+            {
+                var results = await data.GetGames();
+                if (!results.Any()) return NotFound();
+                return Ok(results);
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message);
+            }
         }
 
         // GET api/<GameController>/5
         [HttpGet("{id}")]
-        public GameModel Get(int id)
+        public async Task<IActionResult> GetGame(int id, IGameData data)
         {
-            GameModel game = GlobalConfig.Connection.GetGame(id);
-
-            return game;
+            try
+            {
+                var results = await data.GetGame(id);
+                if (results == null) return NotFound();
+                return Ok(results);
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message);
+            }
         }
 
-        // POST api/<GameController>
+        //// POST api/<GameController>
         [HttpPost]
-        public void Post([FromBody] GameModel value)
+        public async Task<IActionResult> InsertGame(GameModel game, IGameData data)
         {
-            GlobalConfig.Connection.CreateGame(value);
+            try
+            {
+                await data.InsertGame(game);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message);
+            }
         }
 
         //// PUT api/<GameController>/5
-        //[HttpPut("{id}")]
-        //public void Put(int id, [FromBody] string value)
-        //{
-        //}
+        [HttpPut]
+        public async Task<IActionResult> UpdateUser(GameModel game, IGameData data)
+        {
+            try
+            {
+                await data.UpdateGame(game);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message);
+            }
+        }
 
         //// DELETE api/<GameController>/5
-        //[HttpDelete("{id}")]
-        //public void Delete(int id)
-        //{
-        //}
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteGame(int id, IGameData data)
+        {
+            try
+            {
+                await data.DeleteGame(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message);
+            }
+        }
     }
 }

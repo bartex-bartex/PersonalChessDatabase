@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalChessDatabaseApi", "src\PersonalChessDatabaseApi\PersonalChessDatabaseApi.csproj", "{926FA03E-00E6-4136-889B-11A010DF0E02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonalChessDatabaseApi", "src\PersonalChessDatabaseApi\PersonalChessDatabaseApi.csproj", "{926FA03E-00E6-4136-889B-11A010DF0E02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalChessdatabaseLibrary", "PersonalChessdatabaseLibrary\PersonalChessdatabaseLibrary.csproj", "{5351E0C7-6526-4559-8F7B-8877E6AEBEA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonalChessDatabaseUI", "src\PersonalChessDatabaseUI\PersonalChessDatabaseUI.csproj", "{E2841EE6-5183-4132-8641-725E9741436F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalChessDatabaseUI", "src\PersonalChessDatabaseUI\PersonalChessDatabaseUI.csproj", "{E2841EE6-5183-4132-8641-725E9741436F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E985945F-9B42-477C-8E51-1C4EE8F658EB}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "src\DataAccess\DataAccess.csproj", "{D7AFD889-07A4-4D98-BA39-473EDE7E9B5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +24,14 @@ Global
 		{926FA03E-00E6-4136-889B-11A010DF0E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{926FA03E-00E6-4136-889B-11A010DF0E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{926FA03E-00E6-4136-889B-11A010DF0E02}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5351E0C7-6526-4559-8F7B-8877E6AEBEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5351E0C7-6526-4559-8F7B-8877E6AEBEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5351E0C7-6526-4559-8F7B-8877E6AEBEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5351E0C7-6526-4559-8F7B-8877E6AEBEA3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E2841EE6-5183-4132-8641-725E9741436F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E2841EE6-5183-4132-8641-725E9741436F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2841EE6-5183-4132-8641-725E9741436F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2841EE6-5183-4132-8641-725E9741436F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7AFD889-07A4-4D98-BA39-473EDE7E9B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7AFD889-07A4-4D98-BA39-473EDE7E9B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7AFD889-07A4-4D98-BA39-473EDE7E9B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7AFD889-07A4-4D98-BA39-473EDE7E9B5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

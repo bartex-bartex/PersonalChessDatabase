@@ -1,5 +1,4 @@
-
-using PersonalChessdatabaseLibrary;
+using PersonalChessdatabaseLibrary.DataAccess.DbAccess;
 
 namespace PersonalChessDatabaseApi
 {
@@ -15,6 +14,8 @@ namespace PersonalChessDatabaseApi
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddSingleton<ISqlDataAccess, SqlDataAccess>();
+            builder.Services.AddSingleton<IGameData, GameData>();
 
             var app = builder.Build();
 
@@ -31,8 +32,6 @@ namespace PersonalChessDatabaseApi
 
 
             app.MapControllers();
-
-            GlobalConfig.InitializeConnections(DataSourceType.Sql);
 
             app.Run();
         }

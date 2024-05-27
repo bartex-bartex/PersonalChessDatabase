@@ -1,0 +1,2 @@
+﻿global using PersonalChessdatabaseLibrary.DataAccess.Data;
+global using PersonalChessdatabaseLibrary.DataAccess.Models;

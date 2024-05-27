@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PersonalChessdatabaseLibrary.Models
+namespace PersonalChessdatabaseLibrary.DataAccess.Models
 {
     public class GameModel
     {
