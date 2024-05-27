@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PersonalChessdatabaseLibrary
 {
-    public class GlobalConfig
+    public static class GlobalConfig
     {
         public static IDataConnection Connection { get; private set; }
 
